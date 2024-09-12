@@ -15,5 +15,21 @@
  this._root = this._shadowRoot.getElementById('root')
  }
  }
+onCustomWidgetResize (width, height) {
+	this.render();
+}
+onCustomWidgetBeforeUpdate (changedProps) {
+
+}
+onCustomWidgetAfterUpdate () {
+
+}
+onCustomWidgetDestroy () {
+
+}
+
+render () {
+	this._root.textContent = `Hello Custom Widget clientWidth: ${this.clientWidth}, clientWidth: ${this.clientHeight}`
+}
  customElements.define('com-sap-sac-exercise-lkj001-main', Main)
  })()
